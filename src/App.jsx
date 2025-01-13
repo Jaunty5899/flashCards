@@ -6,8 +6,10 @@ function App() {
 
   return (
     <div className="container">
-      <div className="subcontainer progressBar"></div>
-      <div className="subcontainer flashCard">
+      <div className="subContainer">
+        <div className="progressBar"></div>
+      </div>
+      <div className="subContainer flashCard">
         <div className="element card"></div>
         <div className="element control"></div>
       </div>
