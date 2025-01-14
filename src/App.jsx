@@ -25,7 +25,7 @@ let data = [
 ];
 
 function App() {
-  // const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0);
 
   return (
     <div className="container">
@@ -37,13 +37,17 @@ function App() {
       <div className="subContainer flashCard">
         <div className="element card">
           <div class="subElementBody" id="question">
-            hello
+            {data[0].question}
           </div>
           <div class="subElementBody" id="answer">
-            world
+            {data[0].answer}
           </div>
         </div>
-        <div className="element control"></div>
+        <div className="element control">
+          <span id="previous">◀ Previous</span>
+          <span id="showHideAnswer">Show Answer</span>
+          <span id="next">Next ▶</span>
+        </div>
       </div>
     </div>
   );
