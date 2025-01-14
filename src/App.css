@@ -10,6 +10,9 @@
   border-radius: 10px;
   padding: 5px;
 }
+.subContainer.flashCard {
+  min-height: 25px;
+}
 .progressBar {
   display: flex;
   height: 30px;
@@ -46,11 +49,8 @@
 
 /* flipping Element Q/A Card */
 .element.card {
-  display: flex;
   position: relative;
   perspective: 150rem;
-  border-radius: 6px;
-  background-color: brown;
 }
 .subElementBody {
   position: absolute;
@@ -58,25 +58,13 @@
   backface-visibility: hidden;
 }
 
-#result {
-  background: linear-gradient(
-    180deg,
-    rgba(102, 66, 254, 1) 0%,
-    rgba(47, 41, 232, 1) 100%
-  );
-}
-#summary {
+#answer {
   transform: rotateY(-180deg);
-  background: linear-gradient(
-    180deg,
-    rgb(41, 163, 71) 0%,
-    rgba(47, 41, 232, 1) 100%
-  );
 }
 
-.element.card:hover #result {
+.element.card:hover #question {
   transform: rotateY(180deg);
 }
-.element.card:hover #summary {
+.element.card:hover #answer {
   transform: rotateY(0deg);
 }
