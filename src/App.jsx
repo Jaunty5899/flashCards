@@ -7,10 +7,19 @@ function App() {
   return (
     <div className="container">
       <div className="subContainer">
-        <div className="progressBar"></div>
+        <div className="progressBar">
+          <span className="remainingQuestions">5 of 25</span>
+        </div>
       </div>
       <div className="subContainer flashCard">
-        <div className="element card"></div>
+        <div className="element card">
+          <div class="subElementBody" id="result">
+            hello
+          </div>
+          <div class="subElementBody" id="summary">
+            world
+          </div>
+        </div>
         <div className="element control"></div>
       </div>
     </div>

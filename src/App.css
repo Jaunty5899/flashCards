@@ -11,10 +11,21 @@
   padding: 5px;
 }
 .progressBar {
-  height: 25px;
+  display: flex;
+  height: 30px;
   border-radius: 6px;
-  background-color: darkgrey;
-  animation: myfirst 5s linear 2s infinite alternate;
+  background-color: rgb(237, 127, 127);
+  animation: myfirst 5s linear 2s forwards;
+  position: relative;
+  overflow-x: hidden;
+  align-items: center;
+  justify-content: flex-end;
+}
+.remainingQuestions {
+  position: absolute;
+  right: 2%;
+  font-weight: 700;
+  font-size: small;
 }
 @keyframes myfirst {
   0% {
@@ -32,3 +43,40 @@
 }
 .control {
 } */
+
+/* flipping Element Q/A Card */
+.element.card {
+  display: flex;
+  position: relative;
+  perspective: 150rem;
+  border-radius: 6px;
+  background-color: brown;
+}
+.subElementBody {
+  position: absolute;
+  transition: all 0.8s ease-in-out;
+  backface-visibility: hidden;
+}
+
+#result {
+  background: linear-gradient(
+    180deg,
+    rgba(102, 66, 254, 1) 0%,
+    rgba(47, 41, 232, 1) 100%
+  );
+}
+#summary {
+  transform: rotateY(-180deg);
+  background: linear-gradient(
+    180deg,
+    rgb(41, 163, 71) 0%,
+    rgba(47, 41, 232, 1) 100%
+  );
+}
+
+.element.card:hover #result {
+  transform: rotateY(180deg);
+}
+.element.card:hover #summary {
+  transform: rotateY(0deg);
+}
