@@ -62,12 +62,19 @@
   transform: rotateY(-180deg);
 }
 
-.element.card:hover #question {
+.rollbackward {
+  transform: rotateY(180deg);
+}
+.rollforward {
+  transform: rotateY(0deg);
+}
+
+/* .element.card:hover #question {
   transform: rotateY(180deg);
 }
 .element.card:hover #answer {
   transform: rotateY(0deg);
-}
+} */
 
 .element.control {
   display: flex;

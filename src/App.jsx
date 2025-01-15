@@ -26,7 +26,9 @@ let data = [
 
 function App() {
   const [count, setCount] = useState(0);
-  console.log(count);
+  const [toggle, setToggle] = useState(false);
+
+  console.log(toggle);
   return (
     <div className="container">
       <div className="subContainer">
@@ -36,10 +38,16 @@ function App() {
       </div>
       <div className="subContainer flashCard">
         <div className="element card">
-          <div className="subElementBody" id="question">
+          <div
+            className={`subElementBody ${toggle && "rollbackward"}`}
+            id="question"
+          >
             {data[count].question}
           </div>
-          <div className="subElementBody" id="answer">
+          <div
+            className={`subElementBody ${toggle && "rollforward"}`}
+            id="answer"
+          >
             {data[count].answer}
           </div>
         </div>
@@ -50,7 +58,12 @@ function App() {
           >
             ◀ Previous
           </span>
-          <span id="showHideAnswer">Show Answer</span>
+          <span
+            id="showHideAnswer"
+            onClick={() => setToggle(toggle ? false : true)}
+          >
+            Show Answer
+          </span>
           <span
             id="next"
             onClick={() =>
