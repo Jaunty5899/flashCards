@@ -28,11 +28,13 @@ function App() {
   const [count, setCount] = useState(0);
   const [toggle, setToggle] = useState(false);
 
-  console.log(toggle);
   return (
     <div className="container">
       <div className="subContainer">
-        <div className="progressBar">
+        <div
+          className="progressBar"
+          style={{ flexGrow: (1 / data.length) * (count + 1) }}
+        >
           <span className="remainingQuestions">
             {count + 1} of {data.length}
           </span>

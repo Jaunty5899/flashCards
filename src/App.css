@@ -20,7 +20,7 @@
   height: 30px;
   border-radius: 6px;
   background-color: rgb(237, 127, 127);
-  animation: myfirst 5s linear 2s forwards;
+  transition: flex-grow 0.25s linear;
   position: relative;
   overflow-x: hidden;
   align-items: center;
@@ -31,15 +31,6 @@
   right: 2%;
   font-weight: 700;
   font-size: small;
-}
-
-@keyframes myfirst {
-  0% {
-    flex-grow: 0;
-  }
-  100% {
-    flex-grow: 1;
-  }
 }
 
 /* flipping Element Q/A Card */
