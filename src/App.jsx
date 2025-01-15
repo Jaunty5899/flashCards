@@ -44,13 +44,18 @@ function App() {
           </div>
         </div>
         <div className="element control">
-          <span id="previous" onClick={() => setCount(count >= 0 && count - 1)}>
+          <span
+            id="previous"
+            onClick={() => setCount(count > 0 ? count - 1 : 0)}
+          >
             ◀ Previous
           </span>
           <span id="showHideAnswer">Show Answer</span>
           <span
             id="next"
-            onClick={() => setCount(count < data.length && count + 1)}
+            onClick={() =>
+              setCount(count < data.length - 1 ? count + 1 : data.length - 1)
+            }
           >
             Next ▶
           </span>
