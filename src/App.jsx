@@ -33,20 +33,24 @@ function App() {
     <div className="container">
       <div className="subContainer">
         <div className="progressBar">
-          <span className="remainingQuestions">5 of 25</span>
+          <span className="remainingQuestions">
+            {count + 1} of {data.length}
+          </span>
         </div>
       </div>
       <div className="subContainer flashCard">
         <div className="element card">
           <div
-            className={`subElementBody ${toggle && "rollbackward"}`}
-            id="question"
+            className={`subElementBody question ${
+              toggle ? "rollbackward" : undefined
+            }`}
           >
             {data[count].question}
           </div>
           <div
-            className={`subElementBody ${toggle && "rollforward"}`}
-            id="answer"
+            className={`subElementBody answer ${
+              toggle ? "rollforward" : undefined
+            }`}
           >
             {data[count].answer}
           </div>

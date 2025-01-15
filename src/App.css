@@ -58,7 +58,7 @@
   transition: all 0.8s ease-in-out;
   backface-visibility: hidden;
 }
-#answer {
+.answer {
   transform: rotateY(-180deg);
 }
 
@@ -68,13 +68,6 @@
 .rollforward {
   transform: rotateY(0deg);
 }
-
-/* .element.card:hover #question {
-  transform: rotateY(180deg);
-}
-.element.card:hover #answer {
-  transform: rotateY(0deg);
-} */
 
 .element.control {
   display: flex;
