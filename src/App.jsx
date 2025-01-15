@@ -5,7 +5,7 @@ let data = [
   {
     question: "What is the capital of France?",
     answer:
-      "Paris, a vibrant city known for iconic landmarks like the Eiffel Tower and the Louvre.",
+      "Paris, a i am just checking somethingvibrant city known for iconic landmarks like the Eiffel Tower and the Louvre.",
   },
   {
     question: "What is the largest ocean in the world?",
@@ -26,7 +26,7 @@ let data = [
 
 function App() {
   const [count, setCount] = useState(0);
-
+  console.log(count);
   return (
     <div className="container">
       <div className="subContainer">
@@ -36,17 +36,29 @@ function App() {
       </div>
       <div className="subContainer flashCard">
         <div className="element card">
-          <div class="subElementBody" id="question">
-            {data[0].question}
+          <div className="subElementBody" id="question">
+            {data[count].question}
           </div>
-          <div class="subElementBody" id="answer">
-            {data[0].answer}
+          <div className="subElementBody" id="answer">
+            {data[count].answer}
           </div>
         </div>
         <div className="element control">
-          <span id="previous">◀ Previous</span>
+          <span
+            id="previous"
+            onClick={() => setCount(count >= 0 ? count - 1 : 0)}
+          >
+            ◀ Previous
+          </span>
           <span id="showHideAnswer">Show Answer</span>
-          <span id="next">Next ▶</span>
+          <span
+            id="next"
+            onClick={() =>
+              setCount(count < data.length ? count + 1 : data.length - 1)
+            }
+          >
+            Next ▶
+          </span>
         </div>
       </div>
     </div>
