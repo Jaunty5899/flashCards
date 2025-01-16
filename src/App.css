@@ -3,10 +3,11 @@
   gap: 8px;
   flex-direction: column;
   width: 400px;
+  --main-color: rgb(139, 141, 142);
 }
 .subContainer {
   display: flex;
-  border: 1px solid grey;
+  border: 1px solid var(--main-color);
   border-radius: 10px;
   padding: 5px;
   text-align: center;
@@ -19,7 +20,7 @@
   display: flex;
   height: 30px;
   border-radius: 6px;
-  background-color: rgb(237, 127, 127);
+  background-color: var(--main-color);
   transition: flex-grow 0.25s linear;
   position: relative;
   overflow-x: hidden;
